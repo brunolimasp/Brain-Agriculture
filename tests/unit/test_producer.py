@@ -3,7 +3,7 @@ from src.models.tables import Producer
 
 
 def test_create_valid_producer(session):
-    producer_data = {"cpf": "41002295858", "cnpj": "", "name": "Produtor Teste"}
+    producer_data = {"cpf": "78142771080", "cnpj": "", "name": "Produtor Teste"}
     producer = Producer(**producer_data)
     session.add(producer)
     session.commit()
@@ -14,7 +14,7 @@ def test_create_valid_producer(session):
 
 
 def test_create_duplicate_producer(session):
-    producer_data = {"cpf": "41002295858", "cnpj": "", "name": "Produtor Teste"}
+    producer_data = {"cpf": "78142771080", "cnpj": "", "name": "Produtor Teste"}
     producer = Producer(**producer_data)
     session.add(producer)
     session.commit()
