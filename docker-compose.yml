@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:17.2
+    container_name: postgres
+    environment:
+      POSTGRES_USER: develop
+      POSTGRES_PASSWORD: develop
+      POSTGRES_DB: db_develop
+    restart: always
+    ports:
+      - 5432:5432
+
+  backend-datasets:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend-datasets
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    environment:
+      DB_ENGINE: postgresql
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: db_develop
+      DB_USERNAME: develop
+      DB_PASSWORD: develop
+    restart: always
