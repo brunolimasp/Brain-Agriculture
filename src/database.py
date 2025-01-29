@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 try:
     from models.tables import Producer, Property, Crop
 except ImportError:
-    pass
+    from src.models.tables import Producer, Property, Crop
 
 
 # Carrega as variáveis do arquivo .env

@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8000
 
 # Cria as tabelas no banco de dados e inicia o servidor
-CMD ["sh", "-c", "python src/config/database.py && uvicorn app:app --host 0.0.0.0 --port 8000"]
+CMD ["sh", "-c", "python src/database.py && uvicorn app:app --host 0.0.0.0 --port 8000"]

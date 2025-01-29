@@ -22,7 +22,7 @@ docker-compose up -d
 
 - Aguarde até que o Docker baixe as imagens, construa os contêineres e inicie o serviço.
 
-- Uma vez que o serviço esteja em execução, você poderá acessar a documentação das API´s pelo Swagger ou Redoc através das rotas: http://127.0.0.1:8000/redoc  ou http://127.0.0.1:8000/docs
+- Uma vez que o serviço esteja em execução, você poderá acessar a documentação das API´s pelo Swagger ou Redoc através das rotas: http://127.0.0.1:8000/redoc, http://127.0.0.1:8000/docs ou teste em deploy https://brainagriculture.metabyte.dev/docs
 
 - As credenciais para acesso ao banco estão no arquivo `.env`
 
